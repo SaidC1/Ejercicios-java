@@ -16,7 +16,9 @@ public class MAIN {
         promedio = Lector.nextDouble();
         System.out.println("Mi promedio es:" + promedio);
 
-        
-
+        String nombre = "Irvin";
+        nombre = Lector.next();
+        System.out.println("Mi nombre es:" + nombre);
+        Lector.close();
     }
 }
