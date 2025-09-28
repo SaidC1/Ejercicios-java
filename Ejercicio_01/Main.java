@@ -1,19 +1,22 @@
-package Ejercicios_java.Ejercicio_01;
+package Ejercicios_java.ejercicio_1;
+import java.util.Scanner;
 
-public class Main {
-    public static void main(String[]args){
+public class MAIN {
+    public static void main(String[] args) {   
+        Scanner Lector = new Scanner (System.in);
         // Imprimir en pantalla
-        System.out.println("Hola, mundo");
+        System.out.println("hola, mundo");
 
-        // Declaración de variables
+        // Declarar variables
         int edad = 18;
+        edad = Lector.nextInt();
+        System.out.println("Mi edad es: " + edad);
+        
         double promedio = 8.5;
-        String nombre = "Irvin";
+        promedio = Lector.nextDouble();
+        System.out.println("Mi promedio es:" + promedio);
 
-        // Imprimir variables
-        System.out.println("Edad: " + edad);
-        System.out.println("Promedio: " + promedio);
-        System.out.println("Nombre: " + nombre);
+        
+
     }
-    
 }
