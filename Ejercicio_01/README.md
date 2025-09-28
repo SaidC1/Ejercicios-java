@@ -1,31 +1,40 @@
-# Ejercicio 01 – Hola Mundo y Variables Básicas
+# Ejercicio 1 – Hola Mundo, variables y entrada por teclado
 
-## Descripción
-Este ejercicio es la base para comenzar a programar en Java.  
-Consiste en:
-1. Imprimir un mensaje en consola.
-2. Declarar variables de diferentes tipos de datos.
-3. Mostrar el valor de las variables.
+Este es el **primer ejercicio en Java**. El objetivo es aprender los conceptos más básicos:
 
-## Conceptos prácticos
-- `System.out.println` se usa para imprimir en pantalla.
-- Tipos de datos básicos:
-  - `int` → números enteros.
-  - `double` → números decimales.
-  - `String` → texto (cadenas de caracteres).
+- Imprimir mensajes en pantalla.
+- Declarar variables de distintos tipos (`int`, `double`, `String`).
+- Recibir datos del usuario por teclado usando la clase `Scanner`.
 
-## Código
+---
+
+## 📌 Código
+
 ```java
-public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hola, mundo");
+package Ejercicios_java.ejercicio_1;
 
+import java.util.Scanner;
+
+public class MAIN {
+    public static void main(String[] args) {   
+        Scanner Lector = new Scanner(System.in);
+
+        // Imprimir en pantalla
+        System.out.println("hola, mundo");
+
+        // Declarar variables y pedir datos al usuario
         int edad = 18;
+        edad = Lector.nextInt();
+        System.out.println("Mi edad es: " + edad);
+        
         double promedio = 8.5;
-        String nombre = "Irvin";
+        promedio = Lector.nextDouble();
+        System.out.println("Mi promedio es: " + promedio);
 
-        System.out.println("Edad: " + edad);
-        System.out.println("Promedio: " + promedio);
-        System.out.println("Nombre: " + nombre);
+        String nombre = "Irvin";
+        nombre = Lector.next();
+        System.out.println("Mi nombre es: " + nombre);
+
+        Lector.close();
     }
 }
